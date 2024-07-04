@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var fruitlist=[
+    {"name":"banana","color":'yello',pricePerKg:50},
+    {"name":"apple","color":'red',pricePerKg:100},
+    {"name":"orange","color":'orange',pricePerKg:120}
+];
+function getdetails(fname)
+{    
+    try
+    {
+         var fruit= fruitlist.find(fruit => fruit.name === fname );
+         return ("Fruit color ="+ fruit.color + "\n Fruit price =" + fruit.pricePerKg);
+    }
+    catch
+    {
+         return null;
+    }
+}
+console.log(getdetails("applee"));
+console.log(getdetails("banana"));
+
+    </script>
+</body>
+</html>
